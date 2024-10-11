@@ -11,6 +11,7 @@ def ping():
 model_pickle = open("classifier.pkl", "rb")
 clf = pickle.load(model_pickle)
 
+
 @app.route("/predict", methods=['POST']) #expecting input in the form of json
 def predictions():
     loan_req = request.get_json()
